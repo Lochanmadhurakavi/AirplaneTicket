@@ -1,0 +1,51 @@
+{% extends 'passengers/base.html' %}
+
+
+{% block title %}
+Create Passenger
+
+{% endblock title %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage' %}">HomePage</a>
+        </li>
+    </ul>
+    </div>
+</nav>
+
+<div class="container mt-3">
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table style="width: 30%;" class="table table-borderless">
+        <tr>
+            <td>Name:</td>
+            <td>{{form.name}}</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>{{form.age}}</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>{{form.gender}}</td>
+        </tr>
+        <tr>
+            <td>Country:</td>
+            <td>{{form.country}}</td>
+        </tr>
+        <tr>
+            <td>Images:</td>
+            <td>{{form.image}}</td>
+        </tr>
+
+    </table>
+
+<button class="btn btn-primary" type="submit">Submit</button>
+</form>
+</div>
+
+{% endblock %}
