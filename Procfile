@@ -1,1 +1,1 @@
-web: gunicorn airplaneTicket.wsgi
+web gunicorn airplaneTicket.wsgi:application --log-file -
