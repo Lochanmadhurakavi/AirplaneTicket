@@ -1,5 +1,3 @@
-from dataclasses import fields
-from xml.parsers.expat import model
 from django.forms import ModelForm
 from .models import Passenger
 

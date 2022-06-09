@@ -1,6 +1,3 @@
-from distutils.command.upload import upload
-from pyexpat import model
-from tokenize import blank_re
 from django.db import models
 
 # Create your models here.
