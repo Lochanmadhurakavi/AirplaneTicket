@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from pathlib import Path
 import os
 import django_heroku
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 
@@ -72,6 +75,14 @@ TEMPLATES = [
         },
     },
 ]
+
+
+cloudinary.config( 
+  cloud_name = "dfc7xw1ae", 
+  api_key = "312888145376515", 
+  api_secret = "PP1mnbcvwJbBwXwPCR_E9hxVGHo",
+  secure = True
+)
 
 WSGI_APPLICATION = 'airplaneTicket.wsgi.application'
 
